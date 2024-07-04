@@ -6,7 +6,7 @@
 /*   By: gdaignea <gdaignea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 17:01:44 by gdaignea          #+#    #+#             */
-/*   Updated: 2024/06/11 18:38:13 by gdaignea         ###   ########.fr       */
+/*   Updated: 2024/07/04 16:10:43 by gdaignea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int	wait_for_process(pid_t pid1)
 	int	status;
 	int	return_status;
 
+	status = 0;
 	return_status = 0;
 	waitpid(pid1, &status, 0);
 	if (WIFEXITED(status))
